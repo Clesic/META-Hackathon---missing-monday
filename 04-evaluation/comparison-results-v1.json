@@ -1,0 +1,1250 @@
+{
+  "package_sha256": "6f49c505989449879956842b516cd6449f645073cd4e4ff6411d92136dd69650",
+  "provider": "baseten",
+  "model": "meta-models/muse-spark-open-1026",
+  "started": "2026-10-29T21:29:50.552116+00:00",
+  "planned": 36,
+  "reservation_usd": 0.5046675,
+  "input_rate": 1.25,
+  "output_rate": 4.25,
+  "rows": [
+    {
+      "case_id": "F08",
+      "group": "missing_evidence",
+      "condition": "handbook",
+      "expected": "request_evidence",
+      "reservation_usd": 0.0136675,
+      "request_id": "chatcmpl-cea875d6c1da418fac882d7a3bfd6ec9",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 1172,
+        "total_tokens": 1585,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 861,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1059,
+          "rejected_prediction_tokens": 1316
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"ask_expert\",\"reason\":\"Ordered part is P-100 but offered part is P-100B (different part number). Per handbook, for a different part number must consult an approved substitution procedure, and if none applies request expert guidance. No approved substitution procedure evidence was supplied to determine if P-100B is an allowed substitute for P-100, and no evidence resolves certificate/quantity/revision requirements for substitution. Cannot accept as offer does not match order.\",\"evidence_refs\":[\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Ordered part is P-100 but offered part is P-100B (different part number). Per handbook, for a different part number must consult an approved substitution procedure, and if none applies request expert guidance. No approved substitution procedure evidence was supplied to determine if P-100B is an allowed substitute for P-100, and no evidence resolves certificate/quantity/revision requirements for substitution. Cannot accept as offer does not match order.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 7.014
+    },
+    {
+      "case_id": "F07",
+      "group": "missing_evidence",
+      "condition": "handbook",
+      "expected": "request_evidence",
+      "reservation_usd": 0.01366625,
+      "request_id": "chatcmpl-acabe25b2bfc4539b4138e45ca3f3fd6",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 2085,
+        "total_tokens": 2498,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1504,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1977,
+          "rejected_prediction_tokens": 2563
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\",\"reason\": \"Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for a different part number and if none applies requesting expert guidance. No approved substitution procedure is present in supplied evidence, nor is there evidence defining required documents to resolve certificate=null, or to assess quantity 137 for duplicate/delivery rules. Cannot determine acceptability without inventing rules.\",\"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for a different part number and if none applies requesting expert guidance. No approved substitution procedure is present in supplied evidence, nor is there evidence defining required documents to resolve certificate=null, or to assess quantity 137 for duplicate/delivery rules. Cannot determine acceptability without inventing rules.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 6.887
+    },
+    {
+      "case_id": "F11",
+      "group": "missing_evidence",
+      "condition": "raw_answer",
+      "expected": "request_evidence",
+      "reservation_usd": 0.01398375,
+      "request_id": "chatcmpl-c48e5dd19ef84d6791b0953379266404",
+      "usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 1945,
+        "total_tokens": 2404,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1398,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1833,
+          "rejected_prediction_tokens": 2445
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"request_evidence\",\"reason\":\"documents_complete is false. Handbook states to accept a standard order only when required documents are present and to request missing required certificate before acceptance. Cannot accept with incomplete documents. Insufficient supplied facts about supplier, part numbers, revision, certificate, duplicate or delivery status to apply substitution/duplicate/delivery rules; Northline expert-guidance cannot be applied without those facts. Access is true so no permission issue to report.\",\"evidence_refs\":[\"handbook\",\"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "documents_complete is false. Handbook states to accept a standard order only when required documents are present and to request missing required certificate before acceptance. Cannot accept with incomplete documents. Insufficient supplied facts about supplier, part numbers, revision, certificate, duplicate or delivery status to apply substitution/duplicate/delivery rules; Northline expert-guidance cannot be applied without those facts. Access is true so no permission issue to report.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 6.485
+    },
+    {
+      "case_id": "F01",
+      "group": "eligible",
+      "condition": "approved_card",
+      "expected": "accept",
+      "reservation_usd": 0.01437125,
+      "request_id": "chatcmpl-cf975debfcbf48578429d658d81894e0",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 863,
+        "total_tokens": 1413,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 661,
+          "audio_tokens": 0,
+          "reasoning_tokens": 779,
+          "rejected_prediction_tokens": 753
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"accept\", \"reason\": \"Supplier Northline offered P-100B for ordered P-100 with machine_revision R2 and certificate C-B, which satisfies the approved substitution procedure allowing P-100B to replace P-100 only on R2 or R3 with C-B.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Supplier Northline offered P-100B for ordered P-100 with machine_revision R2 and certificate C-B, which satisfies the approved substitution procedure allowing P-100B to replace P-100 only on R2 or R3 with C-B.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.791
+    },
+    {
+      "case_id": "F03",
+      "group": "boundary",
+      "condition": "handbook",
+      "expected": "reject",
+      "reservation_usd": 0.01367,
+      "request_id": "chatcmpl-2913bcb07b9a4b938b254bee3a3bfce5",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 1358,
+        "total_tokens": 1773,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1014,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1267,
+          "rejected_prediction_tokens": 1394
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Ordered part P-100 does not match offered part P-100B. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No approved substitution procedure was supplied in evidence, so the mismatch cannot be resolved and acceptance cannot be determined from supplied evidence alone.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Ordered part P-100 does not match offered part P-100B. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No approved substitution procedure was supplied in evidence, so the mismatch cannot be resolved and acceptance cannot be determined from supplied evidence alone.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 4.216
+    },
+    {
+      "case_id": "F08",
+      "group": "missing_evidence",
+      "condition": "raw_answer",
+      "expected": "request_evidence",
+      "reservation_usd": 0.01409375,
+      "request_id": "chatcmpl-80a932d27a0c41b290f4e4c74ae7e7a0",
+      "usage": {
+        "prompt_tokens": 488,
+        "completion_tokens": 1467,
+        "total_tokens": 1955,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1080,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1367,
+          "rejected_prediction_tokens": 1629
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"request_evidence\",\"reason\": \"Ordered P-100 but offered P-100B is a different part number, requiring approved substitution procedure. Expert guidance allows Northline P-100B for P-100 only on R2/R3 with C-B; certificate C-B is present but machine_revision is null/missing, so cannot accept or reject until revision is provided.\",\"evidence_refs\": [\"handbook\",\"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "Ordered P-100 but offered P-100B is a different part number, requiring approved substitution procedure. Expert guidance allows Northline P-100B for P-100 only on R2/R3 with C-B; certificate C-B is present but machine_revision is null/missing, so cannot accept or reject until revision is provided.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.721
+    },
+    {
+      "case_id": "F01",
+      "group": "eligible",
+      "condition": "raw_answer",
+      "expected": "accept",
+      "reservation_usd": 0.01409625,
+      "request_id": "chatcmpl-d087d447c3694c2a85720573f831658f",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 1713,
+        "total_tokens": 2203,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1268,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1626,
+          "rejected_prediction_tokens": 1847
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"accept\", \"reason\": \"Different part number triggers substitution procedure per handbook. Expert-guidance explicitly authorizes Northline P-100B to replace P-100 only on R2/R3 with C-B. Facts show R2 and C-B, satisfying the condition with no missing certificate indicated.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Different part number triggers substitution procedure per handbook. Expert-guidance explicitly authorizes Northline P-100B to replace P-100 only on R2/R3 with C-B. Facts show R2 and C-B, satisfying the condition with no missing certificate indicated.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 5.36
+    },
+    {
+      "case_id": "F02",
+      "group": "eligible",
+      "condition": "approved_card",
+      "expected": "accept",
+      "reservation_usd": 0.01437125,
+      "request_id": "chatcmpl-d5c43a6988db4aff99e1f4d158614663",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 1131,
+        "total_tokens": 1681,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 863,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1047,
+          "rejected_prediction_tokens": 1013
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"accept\", \"reason\": \"Offered P-100B for ordered P-100 from Northline matches approved substitution condition: machine revision R2 or R3 with certificate C-B. Case provides R3 and C-B with required documents present, satisfying handbook different-part-number procedure.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Offered P-100B for ordered P-100 from Northline matches approved substitution condition: machine revision R2 or R3 with certificate C-B. Case provides R3 and C-B with required documents present, satisfying handbook different-part-number procedure.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.416
+    },
+    {
+      "case_id": "F04",
+      "group": "boundary",
+      "condition": "handbook",
+      "expected": "reject",
+      "reservation_usd": 0.01367125,
+      "request_id": "chatcmpl-db8dec38c23343b29e716cdd92c8cf42",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 1023,
+        "total_tokens": 1438,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 743,
+          "audio_tokens": 0,
+          "reasoning_tokens": 926,
+          "rejected_prediction_tokens": 1217
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"ordered_part P-100 does not match offered_part P-100B. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No substitution procedure was supplied in evidence, so cannot determine if P-100B is an allowed substitute for P-100 and cannot accept as standard order.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "ordered_part P-100 does not match offered_part P-100B. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No substitution procedure was supplied in evidence, so cannot determine if P-100B is an allowed substitute for P-100 and cannot accept as standard order.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 3.518
+    },
+    {
+      "case_id": "F08",
+      "group": "missing_evidence",
+      "condition": "approved_card",
+      "expected": "request_evidence",
+      "reservation_usd": 0.01436875,
+      "request_id": "chatcmpl-d2ea48c1f7be4d5f9206d4b29571e24b",
+      "usage": {
+        "prompt_tokens": 548,
+        "completion_tokens": 966,
+        "total_tokens": 1514,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 732,
+          "audio_tokens": 0,
+          "reasoning_tokens": 867,
+          "rejected_prediction_tokens": 906
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"request_evidence\",\"reason\": \"Offered part P-100B differs from ordered P-100 for Northline, requiring approved substitution check. Expert guidance allows P-100B only on machine revisions R2 or R3 with certificate C-B and requires requesting missing revision/certificate before deciding. machine_revision is null/missing, so decision cannot be made yet.\",\"evidence_refs\": [\"handbook\",\"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "Offered part P-100B differs from ordered P-100 for Northline, requiring approved substitution check. Expert guidance allows P-100B only on machine revisions R2 or R3 with certificate C-B and requires requesting missing revision/certificate before deciding. machine_revision is null/missing, so decision cannot be made yet.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.03
+    },
+    {
+      "case_id": "F02",
+      "group": "eligible",
+      "condition": "raw_answer",
+      "expected": "accept",
+      "reservation_usd": 0.01409625,
+      "request_id": "chatcmpl-a01b20405b6e49488341673a2ef902d8",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 1120,
+        "total_tokens": 1610,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 848,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1024,
+          "rejected_prediction_tokens": 1056
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"accept\", \"reason\": \"Offered P-100B differs from ordered P-100, so substitution procedure applies per handbook. Expert-guidance explicitly allows Northline P-100B to replace P-100 on revision R3 with certificate C-B. Facts show R3 and C-B present, satisfying match and required documents for acceptance.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Offered P-100B differs from ordered P-100, so substitution procedure applies per handbook. Expert-guidance explicitly allows Northline P-100B to replace P-100 on revision R3 with certificate C-B. Facts show R3 and C-B present, satisfying match and required documents for acceptance.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.712
+    },
+    {
+      "case_id": "F01",
+      "group": "eligible",
+      "condition": "handbook",
+      "expected": "accept",
+      "reservation_usd": 0.01367,
+      "request_id": "chatcmpl-1f51558513784b8ab679de2755885cb8",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 1012,
+        "total_tokens": 1427,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 762,
+          "audio_tokens": 0,
+          "reasoning_tokens": 925,
+          "rejected_prediction_tokens": 988
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Offered part P-100B does not match ordered part P-100. Handbook requires consulting approved substitution procedure for different part number and requesting expert guidance if none applies. No substitution procedure is present in supplied evidence, so acceptability cannot be determined and required documents cannot be verified.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires consulting approved substitution procedure for different part number and requesting expert guidance if none applies. No substitution procedure is present in supplied evidence, so acceptability cannot be determined and required documents cannot be verified.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 3.207
+    },
+    {
+      "case_id": "F12",
+      "group": "permission",
+      "condition": "approved_card",
+      "expected": "report_permission_issue",
+      "reservation_usd": 0.01425875,
+      "request_id": "chatcmpl-9c09821aeef04483b92ad414a0e81708",
+      "usage": {
+        "prompt_tokens": 519,
+        "completion_tokens": 781,
+        "total_tokens": 1300,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 597,
+          "audio_tokens": 0,
+          "reasoning_tokens": 719,
+          "rejected_prediction_tokens": 691
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"report_permission_issue\", \"reason\": \"Access is false so system state cannot be verified. Handbook requires reporting missing access rather than guessing, which prevents acceptance despite documents_complete and part_matches being true.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "report_permission_issue",
+      "reason": "Access is false so system state cannot be verified. Handbook requires reporting missing access rather than guessing, which prevents acceptance despite documents_complete and part_matches being true.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 2.533
+    },
+    {
+      "case_id": "F03",
+      "group": "boundary",
+      "condition": "raw_answer",
+      "expected": "reject",
+      "reservation_usd": 0.01409625,
+      "request_id": "chatcmpl-b75563fededf4abb8a91898b5f60e035",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 904,
+        "total_tokens": 1394,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 689,
+          "audio_tokens": 0,
+          "reasoning_tokens": 804,
+          "rejected_prediction_tokens": 816
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Offered P-100B for ordered P-100 is a different part number requiring approved substitution procedure. Expert guidance for Northline allows P-100B to replace P-100 only on machine revisions R2 or R3 with certificate C-B and directs to reject other revisions. Case has revision R1, therefore must reject.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Offered P-100B for ordered P-100 is a different part number requiring approved substitution procedure. Expert guidance for Northline allows P-100B to replace P-100 only on machine revisions R2 or R3 with certificate C-B and directs to reject other revisions. Case has revision R1, therefore must reject.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 2.816
+    },
+    {
+      "case_id": "F07",
+      "group": "missing_evidence",
+      "condition": "approved_card",
+      "expected": "request_evidence",
+      "reservation_usd": 0.0143675,
+      "request_id": "chatcmpl-47e4fcb53fb3408fbae4dd87451a0dc3",
+      "usage": {
+        "prompt_tokens": 548,
+        "completion_tokens": 1279,
+        "total_tokens": 1827,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 951,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1180,
+          "rejected_prediction_tokens": 1338
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"request_evidence\",\"reason\":\"Ordered P-100 vs offered P-100B is a different part number requiring substitution procedure. Expert guidance allows Northline P-100B for P-100 only on R2/R3 with certificate C-B. Revision is R2 but certificate is null/missing, so per handbook and expert guidance must request missing certificate before accepting or rejecting.\",\"evidence_refs\":[\"handbook\",\"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "Ordered P-100 vs offered P-100B is a different part number requiring substitution procedure. Expert guidance allows Northline P-100B for P-100 only on R2/R3 with certificate C-B. Revision is R2 but certificate is null/missing, so per handbook and expert guidance must request missing certificate before accepting or rejecting.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.065
+    },
+    {
+      "case_id": "F09",
+      "group": "outside_scope",
+      "condition": "raw_answer",
+      "expected": "escalate",
+      "reservation_usd": 0.0141025,
+      "request_id": "chatcmpl-c24af199ff004cc2919c1fa751640183",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 1602,
+        "total_tokens": 2092,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1190,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1487,
+          "rejected_prediction_tokens": 1694
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Ordered P-100 vs offered P-100B is a different part number, which per handbook requires an approved substitution procedure. The only substitution procedure provided is limited to Northline with R2/R3 and C-B and explicitly states it says nothing about other suppliers. Supplier is Other supplier, so no applicable rule exists to accept or reject. Per handbook, if none applies, request expert guidance.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Ordered P-100 vs offered P-100B is a different part number, which per handbook requires an approved substitution procedure. The only substitution procedure provided is limited to Northline with R2/R3 and C-B and explicitly states it says nothing about other suppliers. Supplier is Other supplier, so no applicable rule exists to accept or reject. Per handbook, if none applies, request expert guidance.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 5.634
+    },
+    {
+      "case_id": "F05",
+      "group": "boundary",
+      "condition": "approved_card",
+      "expected": "reject",
+      "reservation_usd": 0.01437125,
+      "request_id": "chatcmpl-3954f9055224450798a233741c37c0e3",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 939,
+        "total_tokens": 1489,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 690,
+          "audio_tokens": 0,
+          "reasoning_tokens": 865,
+          "rejected_prediction_tokens": 1053
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Offered P-100B for ordered P-100 from Northline on R2 requires certificate C-B per expert guidance. Certificate is C-A, so substitution is not allowed and must be rejected.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Offered P-100B for ordered P-100 from Northline on R2 requires certificate C-B per expert guidance. Certificate is C-A, so substitution is not allowed and must be rejected.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.346
+    },
+    {
+      "case_id": "F06",
+      "group": "boundary",
+      "condition": "raw_answer",
+      "expected": "reject",
+      "reservation_usd": 0.01410625,
+      "request_id": "chatcmpl-d3c26cbcd3c7468b96ca1303c1050604",
+      "usage": {
+        "prompt_tokens": 492,
+        "completion_tokens": 2011,
+        "total_tokens": 2503,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1458,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1862,
+          "rejected_prediction_tokens": 2413
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Offered part P-100B differs from ordered P-100, so substitution must be validated per handbook. Expert-guidance allows Northline P-100B for P-100 only on R2/R3 with certificate C-B. Machine_revision R2 satisfies revision condition, but certificate is 'C-B-expired' - evidence does not define whether an expired C-B satisfies 'certificate C-B' or counts as 'different certificate' requiring rejection, nor does handbook define expired as missing/invalid. Cannot accept or reject without inventing a rule for expired status.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B differs from ordered P-100, so substitution must be validated per handbook. Expert-guidance allows Northline P-100B for P-100 only on R2/R3 with certificate C-B. Machine_revision R2 satisfies revision condition, but certificate is 'C-B-expired' - evidence does not define whether an expired C-B satisfies 'certificate C-B' or counts as 'different certificate' requiring rejection, nor does handbook define expired as missing/invalid. Cannot accept or reject without inventing a rule for expired status.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 6.552
+    },
+    {
+      "case_id": "F12",
+      "group": "permission",
+      "condition": "raw_answer",
+      "expected": "report_permission_issue",
+      "reservation_usd": 0.01398375,
+      "request_id": "chatcmpl-b3ebe4fb0cd74b95b7654db8f3173bd9",
+      "usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 917,
+        "total_tokens": 1376,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 696,
+          "audio_tokens": 0,
+          "reasoning_tokens": 855,
+          "rejected_prediction_tokens": 851
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"report_permission_issue\", \"reason\": \"Access is false so system state cannot be verified. Handbook requires reporting missing access rather than guessing, so cannot accept despite documents_complete and part_matches being true.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "report_permission_issue",
+      "reason": "Access is false so system state cannot be verified. Handbook requires reporting missing access rather than guessing, so cannot accept despite documents_complete and part_matches being true.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.258
+    },
+    {
+      "case_id": "F06",
+      "group": "boundary",
+      "condition": "handbook",
+      "expected": "reject",
+      "reservation_usd": 0.01368,
+      "request_id": "chatcmpl-9ec2fab81d97475f8091912bde47c4c6",
+      "usage": {
+        "prompt_tokens": 417,
+        "completion_tokens": 1259,
+        "total_tokens": 1676,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 937,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1144,
+          "rejected_prediction_tokens": 1317
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"ask_expert\",\"reason\":\"Offered part P-100B does not match ordered part P-100. Handbook requires consulting approved substitution procedure for different part numbers and requesting expert guidance if none applies. No substitution procedure was supplied in evidence, so cannot determine if P-100B is an allowed substitute for P-100. Also cannot verify acceptance criteria (required documents present and offer matches order) with expired certificate C-B-expired. Missing access to substitution procedure/system state.\",\"evidence_refs\":[\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires consulting approved substitution procedure for different part numbers and requesting expert guidance if none applies. No substitution procedure was supplied in evidence, so cannot determine if P-100B is an allowed substitute for P-100. Also cannot verify acceptance criteria (required documents present and offer matches order) with expired certificate C-B-expired. Missing access to substitution procedure/system state.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 4.042
+    },
+    {
+      "case_id": "F06",
+      "group": "boundary",
+      "condition": "approved_card",
+      "expected": "reject",
+      "reservation_usd": 0.01438125,
+      "request_id": "chatcmpl-863d7a395ac04546b3f6a17510c74390",
+      "usage": {
+        "prompt_tokens": 552,
+        "completion_tokens": 1033,
+        "total_tokens": 1585,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 761,
+          "audio_tokens": 0,
+          "reasoning_tokens": 959,
+          "rejected_prediction_tokens": 1143
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"reject\",\"reason\":\"Offered P-100B for P-100 from Northline on R2 is allowed only with valid certificate C-B. Certificate C-B-expired is not C-B and fails the substitution requirement, so reject per expert rule.\",\"evidence_refs\":[\"handbook\",\"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Offered P-100B for P-100 from Northline on R2 is allowed only with valid certificate C-B. Certificate C-B-expired is not C-B and fails the substitution requirement, so reject per expert rule.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.496
+    },
+    {
+      "case_id": "F05",
+      "group": "boundary",
+      "condition": "raw_answer",
+      "expected": "reject",
+      "reservation_usd": 0.01409625,
+      "request_id": "chatcmpl-60a5d93674e64677959448e798391cf8",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 1057,
+        "total_tokens": 1547,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 813,
+          "audio_tokens": 0,
+          "reasoning_tokens": 974,
+          "rejected_prediction_tokens": 895
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Offered P-100B for ordered P-100 from Northline requires machine revision R2 or R3 AND certificate C-B per substitution rule. Case has R2 but certificate C-A (not C-B), so expert guidance requires rejection.\", \"evidence_refs\": [\"expert-guidance\", \"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Offered P-100B for ordered P-100 from Northline requires machine revision R2 or R3 AND certificate C-B per substitution rule. Case has R2 but certificate C-A (not C-B), so expert guidance requires rejection.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.14
+    },
+    {
+      "case_id": "F11",
+      "group": "missing_evidence",
+      "condition": "handbook",
+      "expected": "request_evidence",
+      "reservation_usd": 0.0135575,
+      "request_id": "chatcmpl-0612f7859b0a436e833ac481943e749d",
+      "usage": {
+        "prompt_tokens": 384,
+        "completion_tokens": 1162,
+        "total_tokens": 1546,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 847,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1101,
+          "rejected_prediction_tokens": 1358
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"request_evidence\",\"reason\": \"Cannot accept standard order per handbook - documents_complete is false despite part_matches true. Handbook requires documents present for acceptance and directs to request missing required certificate before acceptance.\",\"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "Cannot accept standard order per handbook - documents_complete is false despite part_matches true. Handbook requires documents present for acceptance and directs to request missing required certificate before acceptance.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.186
+    },
+    {
+      "case_id": "F09",
+      "group": "outside_scope",
+      "condition": "approved_card",
+      "expected": "escalate",
+      "reservation_usd": 0.0143775,
+      "request_id": "chatcmpl-570cd6c17d7b4a528c18f439b0952057",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 1477,
+        "total_tokens": 2027,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1119,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1354,
+          "rejected_prediction_tokens": 1387
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Offered part P-100B does not match ordered part P-100. Handbook requires an approved substitution procedure for a different part number, and to request expert guidance if none applies. The only substitution procedure provided is explicitly limited to supplier Northline for P-100B for P-100 and states it says nothing about other suppliers, so it does not resolve the case for 'Other supplier'. No applicable rule allows accept/reject.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires an approved substitution procedure for a different part number, and to request expert guidance if none applies. The only substitution procedure provided is explicitly limited to supplier Northline for P-100B for P-100 and states it says nothing about other suppliers, so it does not resolve the case for 'Other supplier'. No applicable rule allows accept/reject.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 4.429
+    },
+    {
+      "case_id": "F10",
+      "group": "standard",
+      "condition": "approved_card",
+      "expected": "accept",
+      "reservation_usd": 0.0142575,
+      "request_id": "chatcmpl-61661acb32d84d648f5d515130a1d72e",
+      "usage": {
+        "prompt_tokens": 519,
+        "completion_tokens": 809,
+        "total_tokens": 1328,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 614,
+          "audio_tokens": 0,
+          "reasoning_tokens": 742,
+          "rejected_prediction_tokens": 751
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"accept\",\"reason\":\"Standard order criteria met: required documents present (documents_complete=true) and offer matches order (part_matches=true) with access available. Per handbook, accept a standard order only when required documents are present and offer matches.\",\"evidence_refs\":[\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Standard order criteria met: required documents present (documents_complete=true) and offer matches order (part_matches=true) with access available. Per handbook, accept a standard order only when required documents are present and offer matches.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.396
+    },
+    {
+      "case_id": "F02",
+      "group": "eligible",
+      "condition": "handbook",
+      "expected": "accept",
+      "reservation_usd": 0.01367,
+      "request_id": "chatcmpl-bd14a212e6ea44819b86a8ab1d2d090c",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 927,
+        "total_tokens": 1342,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 705,
+          "audio_tokens": 0,
+          "reasoning_tokens": 833,
+          "rejected_prediction_tokens": 849
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for a different part number, and requesting expert guidance if none applies. No substitution procedure is included in supplied evidence, so cannot determine if P-100B is an approved substitute for P-100.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for a different part number, and requesting expert guidance if none applies. No substitution procedure is included in supplied evidence, so cannot determine if P-100B is an approved substitute for P-100.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 2.902
+    },
+    {
+      "case_id": "F04",
+      "group": "boundary",
+      "condition": "approved_card",
+      "expected": "reject",
+      "reservation_usd": 0.0143725,
+      "request_id": "chatcmpl-370a8962ecaa4a81bd20fae5338cff89",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 613,
+        "total_tokens": 1163,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 464,
+          "audio_tokens": 0,
+          "reasoning_tokens": 507,
+          "rejected_prediction_tokens": 579
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Offered part P-100B is a substitution for ordered P-100 from Northline. Per expert-guidance, this substitution is allowed only on machine revisions R2 or R3 with certificate C-B; other revisions must be rejected. Case has revision R20 (not R2/R3), so despite certificate C-B, the substitution is not approved.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Offered part P-100B is a substitution for ordered P-100 from Northline. Per expert-guidance, this substitution is allowed only on machine revisions R2 or R3 with certificate C-B; other revisions must be rejected. Case has revision R20 (not R2/R3), so despite certificate C-B, the substitution is not approved.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 2.098
+    },
+    {
+      "case_id": "F05",
+      "group": "boundary",
+      "condition": "handbook",
+      "expected": "reject",
+      "reservation_usd": 0.01367,
+      "request_id": "chatcmpl-7ff0cfbed9c3485191edb53083220a82",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 1248,
+        "total_tokens": 1663,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 903,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1165,
+          "rejected_prediction_tokens": 1512
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"offered_part P-100B does not match ordered_part P-100. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No substitution procedure was supplied, so compliance cannot be verified with supplied evidence alone.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "offered_part P-100B does not match ordered_part P-100. Handbook requires consulting an approved substitution procedure for a different part number and requesting expert guidance if none applies. No substitution procedure was supplied, so compliance cannot be verified with supplied evidence alone.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 4.904
+    },
+    {
+      "case_id": "F09",
+      "group": "outside_scope",
+      "condition": "handbook",
+      "expected": "escalate",
+      "reservation_usd": 0.01367625,
+      "request_id": "chatcmpl-9af63be2f4e54b0fb17b09a783cdda5e",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 1413,
+        "total_tokens": 1828,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1037,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1321,
+          "rejected_prediction_tokens": 1595
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"ask_expert\", \"reason\": \"Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for different part numbers, and if none applies requesting expert guidance. No substitution procedure is provided in evidence, and accept requires offer matches order, so cannot resolve accept/reject on supplied evidence.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "ask_expert",
+      "reason": "Offered part P-100B does not match ordered part P-100. Handbook requires consulting an approved substitution procedure for different part numbers, and if none applies requesting expert guidance. No substitution procedure is provided in evidence, and accept requires offer matches order, so cannot resolve accept/reject on supplied evidence.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": false,
+      "seconds": 6.295
+    },
+    {
+      "case_id": "F03",
+      "group": "boundary",
+      "condition": "approved_card",
+      "expected": "reject",
+      "reservation_usd": 0.01437125,
+      "request_id": "chatcmpl-92c4d02fbd69469582b815f7c0a8544d",
+      "usage": {
+        "prompt_tokens": 550,
+        "completion_tokens": 1250,
+        "total_tokens": 1800,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 919,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1151,
+          "rejected_prediction_tokens": 1398
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Ordered P-100 != offered P-100B is a different part number, requiring approved substitution procedure. Expert guidance permits Northline P-100B for P-100 only on R2/R3 with C-B and directs reject for other revisions/certificates. Case has R1 with C-B, so does not qualify.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Ordered P-100 != offered P-100B is a different part number, requiring approved substitution procedure. Expert guidance permits Northline P-100B for P-100 only on R2/R3 with C-B and directs reject for other revisions/certificates. Case has R1 with C-B, so does not qualify.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.08
+    },
+    {
+      "case_id": "F10",
+      "group": "standard",
+      "condition": "raw_answer",
+      "expected": "accept",
+      "reservation_usd": 0.0139825,
+      "request_id": "chatcmpl-6c8abef81c9546378736c61f267a3fcd",
+      "usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 914,
+        "total_tokens": 1373,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 699,
+          "audio_tokens": 0,
+          "reasoning_tokens": 855,
+          "rejected_prediction_tokens": 806
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\":\"accept\",\"reason\":\"Standard order acceptance conditions met: access is present, required documents are complete, and offered part matches ordered part per facts. Handbook permits acceptance only when documents present and offer matches.\",\"evidence_refs\":[\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Standard order acceptance conditions met: access is present, required documents are complete, and offered part matches ordered part per facts. Handbook permits acceptance only when documents present and offer matches.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 2.799
+    },
+    {
+      "case_id": "F10",
+      "group": "standard",
+      "condition": "handbook",
+      "expected": "accept",
+      "reservation_usd": 0.01355625,
+      "request_id": "chatcmpl-0932c1dc14384b2fa8b789358a050886",
+      "usage": {
+        "prompt_tokens": 384,
+        "completion_tokens": 1917,
+        "total_tokens": 2301,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1393,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1841,
+          "rejected_prediction_tokens": 2275
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"accept\",\"reason\": \"Access confirmed and required documents are present (documents_complete=true) and offer matches order (part_matches=true), satisfying handbook condition to accept a standard order. No facts indicate different part number requiring substitution procedure, potential duplicate, or nonstandard delivery schedule.\",\"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "accept",
+      "reason": "Access confirmed and required documents are present (documents_complete=true) and offer matches order (part_matches=true), satisfying handbook condition to accept a standard order. No facts indicate different part number requiring substitution procedure, potential duplicate, or nonstandard delivery schedule.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 6.217
+    },
+    {
+      "case_id": "F11",
+      "group": "missing_evidence",
+      "condition": "approved_card",
+      "expected": "request_evidence",
+      "reservation_usd": 0.01425875,
+      "request_id": "chatcmpl-e9130ba013b94dfab4f90a97810d66b2",
+      "usage": {
+        "prompt_tokens": 519,
+        "completion_tokens": 1551,
+        "total_tokens": 2070,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 1155,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1457,
+          "rejected_prediction_tokens": 1617
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"request_evidence\", \"reason\": \"part_matches is true but documents_complete is false, so handbook rule 'Accept a standard order only when required documents are present and the offer matches the order' is not satisfied. Handbook requires requesting missing required certificate before acceptance. access is true so no permission issue, and no substitution/duplicate/delivery issue is indicated.\", \"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "part_matches is true but documents_complete is false, so handbook rule 'Accept a standard order only when required documents are present and the offer matches the order' is not satisfied. Handbook requires requesting missing required certificate before acceptance. access is true so no permission issue, and no substitution/duplicate/delivery issue is indicated.",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 4.821
+    },
+    {
+      "case_id": "F04",
+      "group": "boundary",
+      "condition": "raw_answer",
+      "expected": "reject",
+      "reservation_usd": 0.0140975,
+      "request_id": "chatcmpl-7517343174a94781addd10550778a2ec",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 1226,
+        "total_tokens": 1716,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 384
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 911,
+          "audio_tokens": 0,
+          "reasoning_tokens": 1129,
+          "rejected_prediction_tokens": 1294
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"reject\", \"reason\": \"Ordered P-100 vs offered P-100B is a different part number requiring substitution procedure. Expert guidance for Northline allows P-100B to replace P-100 only on R2 or R3 with C-B. Case has R20 with C-B, so revision is not allowed and must be rejected.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "reject",
+      "reason": "Ordered P-100 vs offered P-100B is a different part number requiring substitution procedure. Expert guidance for Northline allows P-100B to replace P-100 only on R2 or R3 with C-B. Case has R20 with C-B, so revision is not allowed and must be rejected.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.95
+    },
+    {
+      "case_id": "F12",
+      "group": "permission",
+      "condition": "handbook",
+      "expected": "report_permission_issue",
+      "reservation_usd": 0.0135575,
+      "request_id": "chatcmpl-383b3befb32540e8ba5b044e1fb95c77",
+      "usage": {
+        "prompt_tokens": 384,
+        "completion_tokens": 842,
+        "total_tokens": 1226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 611,
+          "audio_tokens": 0,
+          "reasoning_tokens": 779,
+          "rejected_prediction_tokens": 1006
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"report_permission_issue\",\"reason\": \"access is false per case facts; handbook requires reporting missing access rather than guessing the system state, so cannot verify/accept order despite documents_complete and part_matches being true\",\"evidence_refs\": [\"handbook\"]}",
+      "finish_reason": "stop",
+      "action": "report_permission_issue",
+      "reason": "access is false per case facts; handbook requires reporting missing access rather than guessing the system state, so cannot verify/accept order despite documents_complete and part_matches being true",
+      "evidence_refs": [
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 2.988
+    },
+    {
+      "case_id": "F07",
+      "group": "missing_evidence",
+      "condition": "raw_answer",
+      "expected": "request_evidence",
+      "reservation_usd": 0.0140925,
+      "request_id": "chatcmpl-d872d43eadc54fdc8d30d25430d0bec1",
+      "usage": {
+        "prompt_tokens": 488,
+        "completion_tokens": 1074,
+        "total_tokens": 1562,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 128
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 826,
+          "audio_tokens": 0,
+          "reasoning_tokens": 965,
+          "rejected_prediction_tokens": 910
+        }
+      },
+      "returned_model": "meta-models/muse-spark-open-1026",
+      "response": "{\"action\": \"request_evidence\", \"reason\": \"Ordered P-100 vs offered P-100B is a different part number requiring approved substitution procedure. Expert guidance allows Northline P-100B to replace P-100 only on R2/R3 with certificate C-B. Revision is R2 (qualifies) but certificate is null/missing, so per handbook and expert guidance must request missing certificate before deciding.\", \"evidence_refs\": [\"handbook\", \"expert-guidance\"]}",
+      "finish_reason": "stop",
+      "action": "request_evidence",
+      "reason": "Ordered P-100 vs offered P-100B is a different part number requiring approved substitution procedure. Expert guidance allows Northline P-100B to replace P-100 only on R2/R3 with certificate C-B. Revision is R2 (qualifies) but certificate is null/missing, so per handbook and expert guidance must request missing certificate before deciding.",
+      "evidence_refs": [
+        "expert-guidance",
+        "handbook"
+      ],
+      "correct": true,
+      "seconds": 3.179
+    }
+  ],
+  "complete": true,
+  "limitation": "New synthetic instances of known rules, one attempt per condition and case. Not a novel-domain or human-transfer study. The card was approved in an earlier developer rehearsal.",
+  "summary": {
+    "handbook": {
+      "attempted": 12,
+      "correct": 3,
+      "wrong_decisions": 0,
+      "expert_requests": 9,
+      "failures": 0,
+      "resolved_without_expert": 1,
+      "eligible_decisions": 7
+    },
+    "raw_answer": {
+      "attempted": 12,
+      "correct": 10,
+      "wrong_decisions": 0,
+      "expert_requests": 2,
+      "failures": 0,
+      "resolved_without_expert": 6,
+      "eligible_decisions": 7
+    },
+    "approved_card": {
+      "attempted": 12,
+      "correct": 11,
+      "wrong_decisions": 0,
+      "expert_requests": 1,
+      "failures": 0,
+      "resolved_without_expert": 7,
+      "eligible_decisions": 7
+    }
+  }
+}

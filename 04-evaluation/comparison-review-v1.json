@@ -1,0 +1,16 @@
+{
+  "estimated_cost_usd": 0.20083895,
+  "cost_basis": "Reported token usage at configured input/cache/output rates; not a provider billing statement.",
+  "requests": 36,
+  "api_failures": 0,
+  "models": [
+    "meta-models/muse-spark-open-1026"
+  ],
+  "review_notes": [
+    "F09: all three conditions ask_expert; oracle expects escalate. This is a reasonable safe response to the supplied handbook, not an unsafe decision. Frozen scores retained.",
+    "F06: C-B-expired is semantically ambiguous. Raw answer requests clarification; approved note rejects. Do not claim a robust advantage from this one case.",
+    "F02: both enriched conditions describe documents as present although only the certificate is supplied; the action matches the rule but explanation wording overstates the evidence.",
+    "Citations identify supplied documents; that alone does not prove every sentence is supported."
+  ],
+  "claim": "Expert knowledge enabled more decisions without further expert help in this small synthetic test. No established accuracy advantage over raw answers; no human productivity claim."
+}

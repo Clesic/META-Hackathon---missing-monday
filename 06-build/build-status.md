@@ -1,0 +1,70 @@
+# Live comparison — October 29, 2026
+
+36/36 requests completed under the user-approved $1 limit; token-based estimate $0.20083895. Final decisions resolved without further expert help: handbook 1/7, raw expert answer 6/7, approved note 7/7. Zero incorrect accept/reject decisions. One ambiguous certificate label explains the note’s lead; no established accuracy advantage over raw answers. Detailed findings: ../04-evaluation/comparison-findings.md.
+
+Removed answer substitution from the legacy recording helper. It now stops on an unexpected suggestion and preserves the failed take. No new video or human study has been produced.
+
+# Current status — October 29, 2026
+
+Clarity and evidence pass completed: plain-language roles and stage labels, first-use instructions, accurate final-decision wording, and clearer harder-order outcomes. A frozen 12-case/three-condition comparison and bounded runner are prepared; paid execution is pending credit/rate confirmation. No new model-quality claim is made.
+
+37 automated tests pass; fixture/link and JavaScript checks pass. Browser inspection confirmed the revised opening and S01 screen. Narration and a first-use test guide are prepared; a new recording and an independent participant session remain outstanding.
+
+The older day2 rehearsal explicitly submits accept/reject decisions from its script. It verifies workflow persistence, not autonomous model decisions. The new comparison requires model-selected actions and retains unsuccessful attempts.
+
+Earlier dated entries below are historical, not the current feature inventory.
+
+# Build status — October 27, 2026
+
+Local app foundation implemented with Python standard library HTTP server, SQLite and HTML/CSS/JavaScript. Start with `python3 -m app.server`; see [run instructions](../RUNNING.md).
+
+Working: 22 synthetic cases, public handbook, saved attempts, reasons, expert-help requests, idempotent action submissions, session isolation, independent synthetic grading and practice totals. Browser check confirmed case start and saved expert-help request. That smoke-test attempt remains in the browser session; start a new session for your own rehearsal.
+
+Validation: seven automated tests pass, covering all 22 expected fixture actions, help versus independent completion, duplicate/conflicting retries, completed attempts, persistence, public field boundaries, invalid requests and local HTTP access protections. Fixture/link validation also passes. These are software checks, not AI performance results.
+
+No Meta or Baseten requests; API spend $0. AI gap diagnosis, expert answers, versioned approval and fresh transfer evaluation remain unimplemented. No deployment or publication. The dependency-free server replaces the proposed FastAPI stack for this local foundation only.
+
+Next: add a server-side Meta adapter and grounded gap diagnosis within the initial $5 testing cap, after verifying actual pricing and available credits.
+
+## Guided rehearsal update
+
+Evidence opening and citations are now persisted. The interface requires an opened source for new decisions and records the participant's stated blocker as an open gap. History supports revisiting any attempt and its action trail. Existing requests survive migration. Ten automated tests pass, including new evidence-reference validation, scoped/idempotent inspection, saved gap persistence and repeated missing-evidence requests. Browser verification covered a new case, opening guidance, citing it and saving a specific knowledge question. No AI diagnosis or provider spending.
+
+## Review fixes — October 27
+
+- Closed an evidence-validation bypass: null/omitted evidence cannot create new actions. Every new action must cite an opened source. Earlier uncited historical actions remain readable.
+- Corrected grading so an unnecessary evidence request is not automatically labelled safe handling. Pausing is reported separately from an appropriate next step.
+- Reading documents after a final submission no longer modifies the original exposure record.
+- Added per-attempt browser draft recovery for text, choices, citations and retry IDs. The selected attempt also survives reload. Draft storage is device-local; actual submitted work remains in SQLite.
+- Serialised UI requests to avoid changing attempts while another request is saving, added recovery for unavailable stored sessions, highlighted the current attempt, and hid irrelevant gap-category controls for final decisions.
+
+Verification: 14 automated tests pass; JavaScript syntax check passes; browser test verified text/citation restoration after reload and action-dependent controls. No model integration, live expert study or provider spending occurred.
+
+## Handover loop — October 27
+
+A successor question in the knowledge or unknown category can now be approved or rejected. Approval stores the typed answer as the next version for that case family and shows it, with the original question, when a later case in the same session opens approved guidance. Rejection stores no card. Another session cannot read the card. The case list is grouped into rehearsal, fresh, boundary and handbook cases, and the three stage labels follow the open attempt.
+
+Verification: 16 automated tests pass, including same-session retrieval, a second approval being refused, and a rejected answer staying unpublished.
+
+## Meta diagnosis — October 27
+
+Opened evidence can be sent to Baseten `meta-models/muse-spark-open-1026` through `POST /api/diagnose`. The response must cite an opened source and return one question. Knowledge maps to asking the expert, missing case data maps to requesting evidence, and a permission problem maps to reporting access. Spend is stored in the local database and stops at $5. A failed call does not add an action. The hidden rulebook is not included in the request.
+
+## Day 2 rehearsal — October 27
+
+`tools/day2_rehearsal.py` ran from an empty database. Baseten diagnosed S01 as a knowledge gap and asked whether an approved substitution procedure allows P-100B for P-100. That question did not contain the hidden rule. The expert answer was drafted into a quoted card and published only when that exact card was approved. S02 then saw the frozen card, accepted, and was graded correct and independent. S05 saw the same card, was rejected because certificate C-A is outside it, and was not accepted. Recorded spend for that run: $0.02572. An edit to a drafted card is not published until the edited wording is approved again. “I don't know” publishes no card. A case started before approval does not later inherit a new card.
+
+A later suggestion on S05, with that approved card open, returned reject because certificate C-A is outside the card. No action was saved by the suggestion. The suggestion instruction now says an order outside an approved card is a reject.
+
+## Demo recording — October 27
+
+`05-demo/missing-monday-demo.mp4` is a 2:53 browser recording of one clean session. S01 diagnosis asked whether an approved substitution procedure covers offering P-100B for ordered P-100. The expert answer was quoted into a card and approved. S02 was accepted from that card with no new expert call. S05 was rejected because certificate C-A is outside the card. Recorded spend on that database: $0.02678. The closing card restates those three outcomes. There is no spoken narration.
+
+
+## November 1 — plain-language app and demo script
+
+Simplified the app’s labels, instructions, action history and order details; improved reading size, spacing and expert-panel contrast. Added direct next-order buttons after expert approval and the first new-order result. AI-suggested source references now select the matching source checkboxes for review.
+
+Rewrote the demo script to 346 spoken words with an earlier product demonstration, a hypothetical opening, and the measured comparison with its ambiguity caveat. The prior script is preserved in `.local-backup/demo-script-before-nov1-clarity.md`.
+
+Validation: 37 tests passed; fixture/link validation and JavaScript syntax passed. Browser walkthrough verified a manually entered question, manual expert approval and the S02 shortcut carrying the approved note forward. This was an agent walkthrough with fictional data, not a human usability study or a new AI evaluation. No new video was recorded in this pass.

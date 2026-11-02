@@ -1,0 +1,177 @@
+{
+  "created": "2026-10-29T21:15:37.901712+00:00",
+  "provider": "baseten",
+  "model": "meta-models/muse-spark-open-1026",
+  "prompt": "Choose the next step for this fictional purchasing order using only the supplied evidence. Do not invent rules. Ask the expert when the evidence does not resolve a rule; request missing facts and report missing access where appropriate. Return JSON with action, reason, evidence_refs. action must be one of accept, reject, request_evidence, escalate, report_permission_issue, ask_expert. Cite supplied evidence IDs.",
+  "handbook": [
+    "Match supplier, ordered part number and offered part number.",
+    "Accept a standard order only when required documents are present and the offer matches the order.",
+    "For a different part number, consult an approved substitution procedure. If none applies, request expert guidance.",
+    "For a potential duplicate, consult the approved duplicate-resolution procedure.",
+    "For a nonstandard delivery schedule, consult the approved delivery procedure.",
+    "Request a missing required certificate before acceptance.",
+    "Report missing access rather than guessing the system state.",
+    "Record your decision and supporting evidence. All actions are simulated."
+  ],
+  "raw_answer": "For Northline, P-100B may replace P-100 only on machine revisions R2 or R3, and only with certificate C-B. Reject other revisions or a different certificate. If the revision or certificate is missing, request it before deciding. This rule says nothing about other suppliers or part mappings.",
+  "approved_card": "For Northline, P-100B may replace P-100 only on machine revisions R2 or R3 with certificate C-B; reject other revisions or certificates. If revision or certificate is missing, request it before deciding. Quote: \"For Northline, P-100B may replace P-100 only on machine revisions R2 or R3, and only with certificate C-B.\" Do not use this card when: Do not apply when the supplier is not Northline or the substitution is not P-100B for P-100, as this rule says nothing about other suppliers or part mappings.",
+  "guidance_id": "SRdVYw838YXUNFHv",
+  "cases": [
+    {
+      "case_id": "F01",
+      "family": "substitution",
+      "group": "eligible",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R2",
+        "certificate": "C-B",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F02",
+      "family": "substitution",
+      "group": "eligible",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R3",
+        "certificate": "C-B",
+        "quantity": 219
+      }
+    },
+    {
+      "case_id": "F03",
+      "family": "substitution",
+      "group": "boundary",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R1",
+        "certificate": "C-B",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F04",
+      "family": "substitution",
+      "group": "boundary",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R20",
+        "certificate": "C-B",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F05",
+      "family": "substitution",
+      "group": "boundary",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R2",
+        "certificate": "C-A",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F06",
+      "family": "substitution",
+      "group": "boundary",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R2",
+        "certificate": "C-B-expired",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F07",
+      "family": "substitution",
+      "group": "missing_evidence",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R2",
+        "certificate": null,
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F08",
+      "family": "substitution",
+      "group": "missing_evidence",
+      "facts": {
+        "supplier": "Northline",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": null,
+        "certificate": "C-B",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F09",
+      "family": "substitution",
+      "group": "outside_scope",
+      "facts": {
+        "supplier": "Other supplier",
+        "ordered_part": "P-100",
+        "offered_part": "P-100B",
+        "machine_revision": "R2",
+        "certificate": "C-B",
+        "quantity": 137
+      }
+    },
+    {
+      "case_id": "F10",
+      "family": "standard",
+      "group": "standard",
+      "facts": {
+        "access": true,
+        "documents_complete": true,
+        "part_matches": true
+      }
+    },
+    {
+      "case_id": "F11",
+      "family": "standard",
+      "group": "missing_evidence",
+      "facts": {
+        "access": true,
+        "documents_complete": false,
+        "part_matches": true
+      }
+    },
+    {
+      "case_id": "F12",
+      "family": "standard",
+      "group": "permission",
+      "facts": {
+        "access": false,
+        "documents_complete": true,
+        "part_matches": true
+      }
+    }
+  ],
+  "conditions": [
+    "handbook",
+    "raw_answer",
+    "approved_card"
+  ],
+  "max_completion_tokens": 2500,
+  "grading_sha256": "825f58ccac9e09ab2e08579a92671320db3349d46732e52cc58ac91be37c9f48",
+  "limitation": "New synthetic instances of known rules, one attempt per condition and case. Not a novel-domain or human-transfer study. The card was approved in an earlier developer rehearsal.",
+  "sha256": "6f49c505989449879956842b516cd6449f645073cd4e4ff6411d92136dd69650"
+}
